@@ -4,7 +4,7 @@
 var hamburger = document.getElementById("hamburger");
 
 // get the menu element
-var menu = document.get ElementById("menu");
+var menu = document.getElementById("menu");
 
 // get the overlay element
 var overlay = document.getElementById("overlay");

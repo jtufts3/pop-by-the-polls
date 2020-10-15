@@ -99,7 +99,7 @@ main > article > header {
   background: linear-gradient(to right, #23517f, #80424d);
   color: white;
   padding: 0 20px;
-  height: calc(100vh-80px);
+  height: calc(100vh - 80px);
   display: flex;
   flex-direction: column-reverse;
   justify-content: space-around;
@@ -239,6 +239,9 @@ nav ul li a {
     width: 100%;
     justify-content: space-between;
   }
+  #hamburger {
+    display: none;
+  }
 }
 
 /* Footer Styles */
@@ -246,9 +249,16 @@ nav ul li a {
 footer {
   background: black;
   color: white;
-  padding: 0 20px;
+  padding: 20px 20px;
 }
 
 footer a {
   color: white;
+}
+
+@media (min-width: 768px) {
+  footer {
+    display: flex;
+    justify-content: center;
+  }
 }
