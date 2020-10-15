@@ -12,6 +12,7 @@ var overlay = document.getElementById("overlay");
 // define toggle function
 function toggleMenu() {
     // either adds or removes active class from element
+    if (window.innerWidth > 768) return false;
     menu.classList.toggle("active");
     overlay.classList.toggle("active");
 }
