@@ -142,3 +142,15 @@ main > article > header > figure {
 /* Button Styles */
 
 /* Navbar Styles */
+
+/* Footer Styles */
+
+footer {
+  background: black;
+  color: white;
+  padding: 0 20px;
+}
+
+footer a {
+  color: white;
+}
