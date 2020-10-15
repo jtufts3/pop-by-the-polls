@@ -22,6 +22,7 @@ p {
 
 img {
   width: 100%;
+  display: block;
 }
 
 figure {
@@ -35,6 +36,21 @@ main > article > section {
 }
 
 /* Grid Styles */
+
+/* This is only applied on Desktop */
+@media (min-width: 768px) {
+  /* This is a grid w/ two columns */
+  .grid-1-2 {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+  /* This is a grid w/ four columns */
+  .grid-1-4 {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-gap: 40px;
+  }
+}
 
 /* Card Styles */
 
@@ -53,6 +69,15 @@ main > article > section {
   font-size: 17px;
 }
 
+/* This is only applied on Desktop */
+@media (min-width: 768px) {
+  /* Image should fill figure container of card that also has two columns */
+  .card.grid-1-2 img {
+    object-fit: cover;
+    height: 100%;
+  }
+}
+
 /* Header Styles */
 
 main > article > header {
@@ -60,6 +85,9 @@ main > article > header {
   color: white;
   padding: 0 20px;
   height: calc(100vh-80px);
+  display: flex;
+  flex-direction: column-reverse;
+  justify-content: space-around;
 }
 
 main > article > header h1 {
@@ -73,6 +101,18 @@ main > article > header a {
   border-radius: 5px;
   padding: 20px;
   display: inline-block;
+}
+
+@media (min-width: 768px) {
+  main > article > header {
+    height: unset;
+    padding: 100px 20px;
+  }
+}
+
+/* The main header should have a grid gap of 40px */
+main > article > header.grid-1-2 {
+  grid-gap: 100px;
 }
 
 /* Button Styles */
